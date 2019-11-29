@@ -1,7 +1,13 @@
-﻿namespace WorkShop.Models
+﻿using System.Collections.Generic;
+
+namespace WorkShop.Models
 {
     public class Potion
     {
+        public Potion()
+        {
+            this.PotionUsers = new HashSet<UserPotion>();
+        }
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -10,7 +16,7 @@
 
         public int HealthRestore { get; set; }
 
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public ICollection<UserPotion> PotionUsers { get; set; }
+
     }
 }

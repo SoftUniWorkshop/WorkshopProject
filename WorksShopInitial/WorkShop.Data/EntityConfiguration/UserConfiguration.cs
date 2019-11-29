@@ -19,22 +19,6 @@ namespace WorkShop.Data.EntityConfiguration
 
             user.Property(x => x.Health)
                 .IsRequired();
-
-            user.HasMany(u => u.Weapons)
-                .WithOne(w => w.User)
-                .HasForeignKey(u => u.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            user.HasMany(u => u.Armors)
-             .WithOne(a => a.User)
-             .HasForeignKey(u => u.UserId)
-             .OnDelete(DeleteBehavior.Restrict);
-
-            user.HasMany(u => u.Potions)
-            .WithOne(p => p.User)
-            .HasForeignKey(u => u.UserId)
-            .OnDelete(DeleteBehavior.Restrict);
-
         }
     }
 }

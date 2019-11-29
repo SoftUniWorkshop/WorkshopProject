@@ -7,6 +7,6 @@ namespace WorkShop.Data
     internal class Configuration
     {
         internal static string ConnectionString
-            => Console.ReadLine();
+            => $"Server={Console.ReadLine()};Database=Gladiators;Integrated Securuty=true";
     }
 }

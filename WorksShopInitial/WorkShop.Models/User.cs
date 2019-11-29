@@ -6,9 +6,9 @@
     {
         public User()
         {
-            Weapons = new List<Weapon>();
-            Armors = new List<Armor>();
-            Potions = new List<Potion>();
+            UserWeapons = new List<UserWeapon>();
+            UserArmors = new List<UserArmor>();
+            UserPotions = new List<UserPotion>();
             UserStatues = new HashSet<UserStatue>();
         }
 
@@ -19,11 +19,11 @@
 
         public int Health { get; set; }
 
-        public ICollection<Weapon> Weapons { get; set; }
+        public ICollection<UserWeapon> UserWeapons { get; set; }
 
-        public ICollection<Armor> Armors { get; set; }
+        public ICollection<UserArmor> UserArmors { get; set; }
 
-        public ICollection<Potion> Potions { get; set; }
+        public ICollection<UserPotion> UserPotions { get; set; }
 
         public ICollection<UserStatue> UserStatues { get; set; }
     }

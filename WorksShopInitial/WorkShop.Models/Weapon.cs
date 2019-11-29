@@ -1,7 +1,13 @@
-﻿namespace WorkShop.Models
+﻿using System.Collections.Generic;
+
+namespace WorkShop.Models
 {
     public class Weapon
     {
+        public Weapon()
+        {
+            this.WeaponUsers = new HashSet<UserWeapon>();
+        }
         public int Id { get; set; }
 
         public string Name { get; set; }
@@ -10,7 +16,6 @@
 
         public int Duratbility { get; set; }
 
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public ICollection<UserWeapon> WeaponUsers { get; set; }
     }
 }
