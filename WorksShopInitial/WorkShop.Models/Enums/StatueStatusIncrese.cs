@@ -2,8 +2,8 @@
 {
     public enum StatueStatusIncrese
     {
-        Health,
-        Defence,
-        Damage
+        Health = 0,
+        Defence = 1,
+        Damage = 2
     }
 }
