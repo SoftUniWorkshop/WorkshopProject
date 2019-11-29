@@ -4,7 +4,7 @@ using WorkShop.Models;
 
 namespace WorkShop.Data
 {
-    class WorkShopContext : DbContext
+    public class WorkShopContext : DbContext
     {
         public WorkShopContext()
         {
