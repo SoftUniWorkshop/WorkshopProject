@@ -1,14 +1,15 @@
-﻿using WorkShop.Models;
-
+﻿
 namespace TemporaryStartUp
 {
    
-    class Startup
+    public class Startup
     {
         static void Main(string[] args)
         {
 
-      
+            using var context = new WorkShop.Data.WorkShopContext();
+
+            context.Database.EnsureCreated();
            
         }
     }
