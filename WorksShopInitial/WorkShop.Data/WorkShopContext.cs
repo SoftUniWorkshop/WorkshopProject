@@ -1,9 +1,6 @@
-﻿using JetBrains.Annotations;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using System.Text;
+using WorkShop.Models;
 
 namespace WorkShop.Data
 {
@@ -12,10 +9,17 @@ namespace WorkShop.Data
         public WorkShopContext()
         {
         }
-        public WorkShopContext(DbContextOptions options) 
-            : base(options)
-        {
-        }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Armor> Armors { get; set; }
+        public DbSet<Weapon> Weapons { get; set; }
+        public DbSet<Potion> Potions { get; set; }
+        public DbSet<Statue> Statues { get; set; }
+        public DbSet<UserArmor> UsersArmors { get; set; }
+        public DbSet<UserWeapon> UsersWepons { get; set; }
+        public DbSet<UserPotion> UsersPotions { get; set; }
+        public DbSet<UserStatue> UsersStatues { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
