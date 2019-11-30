@@ -14,7 +14,7 @@ namespace WorkShop.Models
 
         public int Damage { get; set; }
 
-        public int Duratbility { get; set; }
+        public int Durability { get; set; }
 
         public ICollection<UserWeapon> WeaponUsers { get; set; }
     }

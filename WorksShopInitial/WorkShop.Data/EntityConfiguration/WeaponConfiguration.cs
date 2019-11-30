@@ -17,7 +17,7 @@ namespace WorkShop.Data.EntityConfiguration
             weapon.Property(x => x.Damage)
                 .IsRequired();
 
-            weapon.Property(x => x.Duratbility)
+            weapon.Property(x => x.Durability)
                 .IsRequired();
         }
     }
